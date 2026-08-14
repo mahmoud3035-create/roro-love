@@ -5,15 +5,30 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>إلى رورو ❤️ | من حوده</title>
+    <title>
+        إلى رورو ❤️ | من حوده
+    </title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap"
@@ -280,6 +295,10 @@
             <div class="memories-book">
 
 
+                <!-- ========================================
+                     القفل
+                ======================================== -->
+
                 <div class="book-lock">
                     🔒
                 </div>
@@ -304,11 +323,15 @@
 
 
                 <!-- ========================================
-                     مميزات الكتاب
+                     إحصائيات كتاب الذكريات
                 ======================================== -->
 
                 <div class="memory-features">
 
+
+                    <!-- ========================================
+                         عدد الرسائل المقفولة
+                    ======================================== -->
 
                     <div class="memory-feature">
 
@@ -320,16 +343,17 @@
                             رسائل مقفولة
                         </strong>
 
-                        <small>
-
-                            نقدر نكتب رسالة ونحدد
-                            ميعاد فتحها.
-
+                        <small id="locked-memories-count">
+                            جاري الحساب...
                         </small>
 
                     </div>
 
 
+
+                    <!-- ========================================
+                         عداد آخر رسالة
+                    ======================================== -->
 
                     <div class="memory-feature">
 
@@ -341,16 +365,17 @@
                             عداد الفتح
                         </strong>
 
-                        <small>
-
-                            قبل موعد الفتح يظهر الوقت
-                            المتبقي للرسالة.
-
+                        <small id="latest-memory-countdown">
+                            جاري الحساب...
                         </small>
 
                     </div>
 
 
+
+                    <!-- ========================================
+                         تاريخ آخر رسالة
+                    ======================================== -->
 
                     <div class="memory-feature">
 
@@ -359,94 +384,12 @@
                         </span>
 
                         <strong>
-                            كل رسالة بتاريخ
+                            آخر رسالة بتاريخ
                         </strong>
 
-                        <small>
-
-                            كل حاجة تتكتب تفضل جزء
-                            من كتاب ذكرياتنا.
-
+                        <small id="latest-memory-date">
+                            جاري الحساب...
                         </small>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- ========================================
-                     أنواع الرسائل
-                ======================================== -->
-
-                <div class="memory-types">
-
-
-                    <div class="memory-type">
-
-                        <span>
-                            💌
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                رسالة ليكي
-                            </strong>
-
-                            <p>
-                                كلام نفسك توصله
-                                من غير ما تستني رد.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="memory-type">
-
-                        <span>
-                            🕊️
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                كلام من غير رد
-                            </strong>
-
-                            <p>
-                                أقول اللي جوايا وخلاص...
-                                المهم إن الكلام يوصل.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="memory-type">
-
-                        <span>
-                            🗓️
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                رسالة للمستقبل
-                            </strong>
-
-                            <p>
-                                رسالة نكتبها النهارده
-                                ونفتحها في وقت نختاره.
-                            </p>
-
-                        </div>
 
                     </div>
 
@@ -468,7 +411,7 @@
 
 
                 <!-- ========================================
-                     زر إضافة ذكرى
+                     زر إضافة رسالة
                 ======================================== -->
 
                 <div class="add-memory-area">
@@ -486,7 +429,7 @@
 
 
                 <!-- ========================================
-                     فورم إضافة الذكرى
+                     فورم إضافة الرسالة
                 ======================================== -->
 
                 <div
@@ -495,6 +438,10 @@
                     style="display: none;"
                 >
 
+
+                    <!-- ========================================
+                         رأس الفورم
+                    ======================================== -->
 
                     <div class="memory-form-header">
 
@@ -569,56 +516,60 @@
 
 
                     <!-- ========================================
-                         التاريخ والنوع
+                         تاريخ الرسالة
                     ======================================== -->
 
-                   <div class="form-group">
+                    <div class="form-group">
 
-    <label for="memory-date">
-        📅 تاريخ الرسالة
-    </label>
+                        <label for="memory-date">
+                            📅 تاريخ الرسالة
+                        </label>
 
-    <input
-        type="date"
-        id="memory-date"
-        readonly
-    >
+                        <input
+                            type="date"
+                            id="memory-date"
+                            readonly
+                        >
 
-    <small class="form-hint">
-        📅 تاريخ الرسالة هو تاريخ اليوم تلقائيًا.
-    </small>
+                        <small class="form-hint">
+                            📅 تاريخ الرسالة هو تاريخ اليوم تلقائيًا.
+                        </small>
 
-</div>
+                    </div>
 
 
 
-                        <div class="form-group"><div class="form-group">
+                    <!-- ========================================
+                         نوع الرسالة
+                    ======================================== -->
 
-    <label for="memory-type">
-        🏷️ نوع الرسالة
-    </label>
+                    <div class="form-group">
 
-    <select id="memory-type">
+                        <label for="memory-type">
+                            🏷️ نوع الرسالة
+                        </label>
 
-        <option value="حب">
-            ❤️ حب
-        </option>
+                        <select id="memory-type">
 
-        <option value="ذكرى">
-            📖 ذكرى
-        </option>
+                            <option value="حب">
+                                ❤️ حب
+                            </option>
 
-        <option value="مستقبل">
-            🗓️ للمستقبل
-        </option>
+                            <option value="ذكرى">
+                                📖 ذكرى
+                            </option>
 
-        <option value="أخرى">
-            ✨ أخرى
-        </option>
+                            <option value="مستقبل">
+                                🗓️ للمستقبل
+                            </option>
 
-    </select>
+                            <option value="أخرى">
+                                ✨ أخرى
+                            </option>
 
-</div>
+                        </select>
+
+                    </div>
 
 
 
@@ -714,7 +665,6 @@
                         </button>
 
 
-
                         <button
                             type="button"
                             class="cancel-btn"
@@ -798,7 +748,7 @@
 
 
     <!-- ========================================
-         العداد
+         العداد الرئيسي
     ======================================== -->
 
     <section>
