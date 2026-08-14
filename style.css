@@ -11,6 +11,7 @@ html {
 body {
     font-family: "Cairo", Arial, sans-serif;
     color: white;
+
     background:
         radial-gradient(
             circle at 50% -10%,
@@ -18,13 +19,20 @@ body {
             #0d0924 38%,
             #050716 80%
         );
+
     overflow-x: hidden;
 }
 
-/* النجوم */
+
+/* ========================================
+   النجوم
+======================================== */
+
 body::before {
     content: "";
+
     position: fixed;
+
     inset: 0;
 
     background-image:
@@ -40,38 +48,60 @@ body::before {
         70px 90px;
 
     opacity: .35;
+
     pointer-events: none;
+
     z-index: 0;
 }
 
-/* الأقسام */
+
+/* ========================================
+   الأقسام
+======================================== */
+
 section {
     min-height: 60vh;
+
     padding: 90px 0;
+
     position: relative;
+
     z-index: 2;
 }
 
+
 .container {
     width: min(1050px, 92%);
+
     margin: auto;
 }
 
-/* البداية */
+
+/* ========================================
+   البداية
+======================================== */
+
 .hero {
     min-height: 100vh;
+
     display: flex;
+
     align-items: center;
+
     text-align: center;
 }
 
+
 .hero-card {
     width: 100%;
+
     padding: 60px 25px;
 
-    background: rgba(10, 8, 28, .65);
+    background:
+        rgba(10, 8, 28, .65);
 
-    border: 1px solid rgba(255, 255, 255, .12);
+    border:
+        1px solid rgba(255, 255, 255, .12);
 
     border-radius: 35px;
 
@@ -81,7 +111,11 @@ section {
         0 25px 90px rgba(0, 0, 0, .5);
 }
 
-/* البادج */
+
+/* ========================================
+   البادج
+======================================== */
+
 .badge {
     display: inline-block;
 
@@ -89,44 +123,70 @@ section {
 
     border-radius: 100px;
 
-    background: rgba(255, 92, 142, .12);
+    background:
+        rgba(255, 92, 142, .12);
 
-    border: 1px solid rgba(255, 92, 142, .3);
+    border:
+        1px solid rgba(255, 92, 142, .3);
 
     color: #ffb4ca;
 }
 
-/* العنوان الرئيسي */
+
+/* ========================================
+   العنوان الرئيسي
+======================================== */
+
 h1 {
     font-family: "Playfair Display", serif;
-    font-size: clamp(50px, 9vw, 90px);
+
+    font-size:
+        clamp(50px, 9vw, 90px);
+
     margin: 20px 0;
 }
+
 
 h1 span {
     color: #ff6f9f;
 }
 
+
 .subtitle {
     font-size: 20px;
+
     color: #ddd;
+
     line-height: 2;
 }
 
-/* الأزرار */
+
+/* ========================================
+   الأزرار
+======================================== */
+
 .hero-buttons {
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 12px;
+
     flex-wrap: wrap;
+
     margin-top: 28px;
 }
 
+
 .main-btn {
     margin-top: 28px;
+
     padding: 14px 30px;
+
     border: none;
+
     border-radius: 100px;
 
     background:
@@ -138,8 +198,10 @@ h1 span {
 
     color: white;
 
-    font-family: Cairo;
+    font-family: "Cairo", Arial, sans-serif;
+
     font-size: 16px;
+
     font-weight: 700;
 
     cursor: pointer;
@@ -150,9 +212,11 @@ h1 span {
     transition: .3s;
 }
 
+
 .hero-buttons .main-btn {
     margin-top: 0;
 }
+
 
 .main-btn:hover {
     transform:
@@ -160,7 +224,11 @@ h1 span {
         scale(1.03);
 }
 
-/* زر الذكريات */
+
+/* ========================================
+   زر الذكريات
+======================================== */
+
 .memories-btn {
     background:
         linear-gradient(
@@ -173,31 +241,48 @@ h1 span {
         0 10px 30px rgba(124, 92, 255, .28);
 }
 
+
 .memories-btn:hover {
     box-shadow:
         0 15px 40px rgba(124, 92, 255, .4);
 }
 
-/* العناوين */
+
+/* ========================================
+   العناوين
+======================================== */
+
 .title {
     text-align: center;
+
     margin-bottom: 45px;
 }
 
+
 .title h2 {
-    font-size: clamp(28px, 5vw, 45px);
+    font-size:
+        clamp(28px, 5vw, 45px);
+
     margin-bottom: 8px;
 }
+
 
 .title p {
     color: #aaa;
 }
 
-/* الرسالة */
+
+/* ========================================
+   الرسالة
+======================================== */
+
 .love-letter {
     max-width: 800px;
+
     margin: auto;
+
     padding: 40px;
+
     border-radius: 30px;
 
     background:
@@ -211,23 +296,35 @@ h1 span {
         1px solid rgba(255, 255, 255, .1);
 
     line-height: 2.3;
+
     font-size: 18px;
 }
+
 
 .love-letter strong {
     color: #ff91b2;
 }
 
-/* الذكريات القديمة */
+
+/* ========================================
+   الذكريات القديمة
+======================================== */
+
 .memories {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 20px;
 }
 
+
 .memory {
     padding: 30px;
+
     min-height: 220px;
+
     border-radius: 25px;
 
     background:
@@ -239,37 +336,53 @@ h1 span {
     transition: .3s;
 }
 
+
 .memory:hover {
-    transform: translateY(-8px);
+    transform:
+        translateY(-8px);
 
     background:
         rgba(255, 255, 255, .09);
 }
 
+
 .memory .icon {
     font-size: 42px;
+
     margin-bottom: 15px;
 }
+
 
 .memory h3 {
     margin-bottom: 10px;
 }
 
+
 .memory p {
     color: #c8c3d0;
+
     line-height: 1.9;
 }
 
-/* كتاب الذكريات */
+
+/* ========================================
+   كتاب الذكريات
+======================================== */
+
 #memories-book-section {
     scroll-margin-top: 20px;
 }
 
+
 .memories-book {
     max-width: 900px;
+
     margin: auto;
+
     padding: 50px 35px;
+
     text-align: center;
+
     border-radius: 35px;
 
     background:
@@ -286,8 +399,10 @@ h1 span {
         0 25px 90px rgba(0, 0, 0, .4);
 
     position: relative;
+
     overflow: hidden;
 }
+
 
 .memories-book::before {
     content: "";
@@ -295,12 +410,15 @@ h1 span {
     position: absolute;
 
     width: 300px;
+
     height: 300px;
 
     top: -180px;
+
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     background:
         radial-gradient(
@@ -312,41 +430,67 @@ h1 span {
     pointer-events: none;
 }
 
+
 .book-lock {
     font-size: 60px;
+
     margin-bottom: 10px;
+
     position: relative;
+
     z-index: 1;
 }
+
 
 .memories-book h3 {
     font-size: 34px;
+
     margin-bottom: 15px;
+
     position: relative;
+
     z-index: 1;
 }
+
 
 .memories-book > p {
     color: #cfcbd8;
+
     line-height: 2;
+
     max-width: 720px;
+
     margin: 0 auto;
+
     position: relative;
+
     z-index: 1;
 }
 
-/* مميزات كتاب الذكريات */
+
+/* ========================================
+   مميزات كتاب الذكريات
+======================================== */
+
 .memory-features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 15px;
+
     margin-top: 35px;
+
     position: relative;
+
     z-index: 1;
 }
+
 
 .memory-feature {
     padding: 25px 18px;
+
     border-radius: 22px;
 
     background:
@@ -358,8 +502,10 @@ h1 span {
     transition: .3s;
 }
 
+
 .memory-feature:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
     background:
         rgba(255, 255, 255, .09);
@@ -368,40 +514,65 @@ h1 span {
         rgba(255, 145, 178, .25);
 }
 
+
 .memory-feature span {
     display: block;
+
     font-size: 36px;
+
     margin-bottom: 10px;
 }
 
+
 .memory-feature strong {
     display: block;
+
     margin-bottom: 7px;
+
     color: #fff;
 }
 
+
 .memory-feature small {
     display: block;
+
     color: #aaa;
+
     line-height: 1.8;
 }
 
-/* أنواع الرسائل */
+
+/* ========================================
+   أنواع الرسائل
+======================================== */
+
 .memory-types {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 15px;
+
     margin-top: 20px;
+
     position: relative;
+
     z-index: 1;
 }
 
+
 .memory-type {
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
     text-align: right;
+
     padding: 20px;
+
     border-radius: 20px;
 
     background:
@@ -411,35 +582,54 @@ h1 span {
         1px solid rgba(255, 255, 255, .07);
 }
 
+
 .memory-type > span {
     font-size: 34px;
+
     flex-shrink: 0;
 }
 
+
 .memory-type strong {
     display: block;
+
     margin-bottom: 5px;
 }
 
+
 .memory-type p {
     color: #aaa;
+
     font-size: 13px;
+
     line-height: 1.7;
 }
 
-/* رسالة الكتاب */
+
+/* ========================================
+   رسالة الكتاب
+======================================== */
+
 .memories-note {
     margin-top: 30px;
+
     color: #ff91b2;
+
     font-size: 18px;
+
     font-weight: 700;
+
     position: relative;
+
     z-index: 1;
 }
 
+
 .locked-note {
     margin-top: 25px;
+
     padding: 20px;
+
     border-radius: 20px;
 
     background:
@@ -449,30 +639,820 @@ h1 span {
         1px solid rgba(124, 92, 255, .18);
 
     color: #d8cfff;
+
     line-height: 2;
 
     position: relative;
+
     z-index: 1;
 }
 
+
 .locked-note small {
     color: #aaa;
+
     font-size: 13px;
 }
 
-/* العداد */
-.counter {
-    max-width: 800px;
-    margin: auto;
+
+/* ========================================
+   زر إضافة ذكرى
+======================================== */
+
+.add-memory-area {
+    text-align: center;
+
+    margin-top: 30px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.memory-add-btn {
+    margin-top: 0;
+
+    min-width: 210px;
+}
+
+
+/* ========================================
+   فورم إضافة الذكرى
+======================================== */
+
+.memory-form {
+    max-width: 760px;
+
+    margin: 25px auto 0;
+
+    padding: 35px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .09),
+            rgba(255, 255, 255, .035)
+        );
+
+    border:
+        1px solid rgba(255, 145, 178, .2);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .35);
+
+    text-align: right;
+
+    position: relative;
+
+    z-index: 5;
+
+    animation:
+        formAppear .35s ease;
+}
+
+
+@keyframes formAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   رأس الفورم
+======================================== */
+
+.memory-form-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.memory-form-icon {
+    font-size: 45px;
+
+    margin-bottom: 8px;
+}
+
+
+.memory-form-header h3 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.memory-form-header p {
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   مجموعات الحقول
+======================================== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #fff;
+
+    font-weight: 700;
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   الحقول
+======================================== */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, .12);
+
+    background:
+        rgba(5, 7, 22, .75);
+
+    color: white;
+
+    font-family:
+        "Cairo",
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .25s;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 150px;
+
+    line-height: 1.9;
+}
+
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   التركيز على الحقول
+======================================== */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color:
+        #ff6f9f;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 111, 159, .1);
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #777;
+}
+
+
+/* ========================================
+   صف التاريخ والنوع
+======================================== */
+
+.form-row {
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 15px;
 }
 
-.time-box {
-    padding: 25px 10px;
+
+/* ========================================
+   خيار القفل
+======================================== */
+
+.lock-option {
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+
+    padding: 16px 18px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(124, 92, 255, .08);
+
+    border:
+        1px solid rgba(124, 92, 255, .18);
+}
+
+
+.lock-option label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    color: #ddd;
+
+    font-weight: 600;
+}
+
+
+.lock-option input {
+
+    width: 18px;
+
+    height: 18px;
+
+    accent-color:
+        #ff6f9f;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   المساعدة
+======================================== */
+
+.form-hint {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   أزرار الفورم
+======================================== */
+
+.form-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+.form-buttons .main-btn {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   زر إلغاء
+======================================== */
+
+.cancel-btn {
+
+    padding: 14px 28px;
+
+    border:
+        1px solid rgba(255, 255, 255, .15);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255, 255, 255, .06);
+
+    color: #ddd;
+
+    font-family:
+        "Cairo",
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.cancel-btn:hover {
+
+    background:
+        rgba(255, 255, 255, .12);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* ========================================
+   حالة الحفظ
+======================================== */
+
+.form-status {
+
+    min-height: 25px;
+
+    margin-top: 18px;
+
     text-align: center;
+
+    color: #ff91b2;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   قائمة الذكريات
+======================================== */
+
+.memories-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+    position: relative;
+
+    z-index: 2;
+
+    /*
+       مهم:
+       يسمح للكروت بالتمدد حسب محتواها
+    */
+    align-items: start;
+}
+
+
+/* ========================================
+   الذكرى الديناميكية
+======================================== */
+
+.dynamic-memory {
+
+    position: relative;
+
+    /*
+       كان overflow:hidden
+       وده كان بيقص العداد
+    */
+    overflow: visible !important;
+
+    min-height: 220px;
+
+    height: auto !important;
+
+    align-self: start;
+}
+
+
+.dynamic-memory:hover {
+
+    transform:
+        translateY(-6px);
+}
+
+
+/* ========================================
+   الرسائل المقفولة
+======================================== */
+
+.locked-memory {
+
+    height: auto !important;
+
+    min-height: 420px;
+
+    overflow: visible !important;
+
+    display: block;
+
+    padding-bottom: 25px;
+}
+
+
+.locked-memory-content {
+
+    width: 100%;
+
+    height: auto !important;
+
+    min-height: 100%;
+
+    overflow: visible !important;
+
+    display: block;
+
+    position: relative;
+}
+
+
+/* ========================================
+   صورة الذكرى
+======================================== */
+
+.memory-image {
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.memory-image:hover {
+    transform:
+        scale(1.02);
+}
+
+
+/* ========================================
+   محتوى الذكرى
+======================================== */
+
+.memory-icon {
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+.memory-date {
+
+    color: #ff91b2;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+
+.dynamic-memory .memory-type {
+
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(124, 92, 255, .15);
+
+    border:
+        1px solid rgba(124, 92, 255, .2);
+
+    color: #d8cfff;
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+.dynamic-memory h3 {
+
+    margin-bottom: 10px;
+}
+
+
+.dynamic-memory p {
+
+    white-space: pre-wrap;
+
+    color: #c8c3d0;
+
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   العداد الخاص بالرسائل المقفولة
+======================================== */
+
+.locked-countdown {
+
+    display: block !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    min-height: 100px;
+
+    margin-top: 20px;
+
+    padding: 14px 8px;
+
+    text-align: center;
+
+    overflow: visible !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* ========================================
+   أيقونة القفل
+======================================== */
+
+.countdown-lock-icon {
+
+    display: block;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   عنوان العداد
+======================================== */
+
+.countdown-title {
+
+    display: block;
+
+    color: #ff91b2;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   صف الوقت
+======================================== */
+
+.countdown-time {
+
+    display: flex !important;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    overflow: visible !important;
+}
+
+
+/* ========================================
+   مربعات العداد
+======================================== */
+
+.countdown-box {
+
+    display: flex !important;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 52px;
+
+    min-width: 52px;
+
+    min-height: 58px;
+
+    padding: 6px 4px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 145, 178, .09);
+
+    border:
+        1px solid rgba(255, 145, 178, .25);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, .15);
+}
+
+
+/* ========================================
+   أرقام العداد
+======================================== */
+
+.countdown-box strong {
+
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   أسماء الوحدات
+======================================== */
+
+.countdown-box small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #ffb4ca;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   موعد الفتح
+======================================== */
+
+.open-date-text {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 13px;
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   عند فتح الرسالة
+======================================== */
+
+.countdown-opened {
+
+    display: block;
+
+    color: #ff91b2;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    padding: 15px;
+}
+
+
+/* ========================================
+   حالة التحميل
+======================================== */
+
+.countdown-loading {
+
+    display: block;
+
+    color: #ffb4ca;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   العداد الرئيسي
+======================================== */
+
+.counter {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.time-box {
+
+    padding: 25px 10px;
+
+    text-align: center;
+
     border-radius: 22px;
 
     background:
@@ -482,26 +1462,43 @@ h1 span {
         1px solid rgba(255, 255, 255, .08);
 }
 
+
 .time-box b {
+
     display: block;
+
     font-size: 34px;
+
     color: #ff91b2;
 }
+
 
 .time-box small {
     color: #aaa;
 }
 
-/* الصور */
+
+/* ========================================
+   الصور
+======================================== */
+
 .gallery {
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 20px;
 }
 
+
 .gallery img {
+
     width: 100%;
+
     height: 430px;
+
     object-fit: cover;
 
     border-radius: 25px;
@@ -513,27 +1510,41 @@ h1 span {
         0 15px 45px rgba(0, 0, 0, .35);
 
     transition: .4s;
+
     cursor: pointer;
 }
 
+
 .gallery img:hover {
-    transform: scale(1.03);
+
+    transform:
+        scale(1.03);
 }
 
-/* الرسالة السرية */
+
+/* ========================================
+   الرسالة السرية
+======================================== */
+
 .secret {
     text-align: center;
 }
 
+
 .secret-box {
+
     max-width: 700px;
+
     min-height: 130px;
 
     margin: 25px auto 0;
+
     padding: 30px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 25px;
@@ -545,67 +1556,110 @@ h1 span {
         1px solid rgba(255, 255, 255, .1);
 
     line-height: 2;
+
     font-size: 18px;
 }
 
-/* النهاية */
+
+/* ========================================
+   النهاية
+======================================== */
+
 .final {
+
     min-height: 90vh;
+
     display: flex;
+
     align-items: center;
+
     text-align: center;
 }
 
+
 .question {
-    font-size: clamp(30px, 6vw, 55px);
+
+    font-size:
+        clamp(30px, 6vw, 55px);
+
     margin: 25px 0;
 }
 
+
 .answers {
+
     display: flex;
+
     gap: 15px;
+
     justify-content: center;
+
     flex-wrap: wrap;
 }
 
+
 #celebrate {
+
     display: none;
+
     margin-top: 30px;
+
     color: #ffb2c8;
+
     font-size: 21px;
 }
 
-/* الفوتر */
+
+/* ========================================
+   الفوتر
+======================================== */
+
 footer {
+
     text-align: center;
+
     padding: 30px;
+
     color: #777;
 
     border-top:
         1px solid rgba(255, 255, 255, .08);
 }
 
-/* تكبير الصور */
+
+/* ========================================
+   تكبير الصور
+======================================== */
+
 .image-overlay {
+
     position: fixed;
+
     inset: 0;
+
     z-index: 9999;
 
     background:
         rgba(0, 0, 0, .92);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     padding: 25px;
 }
 
+
 .image-overlay img {
+
     max-width: 95%;
+
     max-height: 90vh;
 
     width: auto;
+
     height: auto;
 
     object-fit: contain;
@@ -616,13 +1670,17 @@ footer {
         0 20px 80px rgba(0, 0, 0, .7);
 }
 
+
 .close-image {
+
     position: absolute;
 
     top: 20px;
+
     right: 30px;
 
     width: 45px;
+
     height: 45px;
 
     border-radius: 50%;
@@ -631,26 +1689,37 @@ footer {
         rgba(255, 255, 255, .12);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     font-size: 35px;
 
     cursor: pointer;
+
     color: white;
 }
 
+
 .close-image:hover {
+
     background:
         rgba(255, 80, 130, .5);
 }
 
-/* القلوب */
+
+/* ========================================
+   القلوب
+======================================== */
+
 .heart {
+
     position: fixed;
+
     bottom: -30px;
 
-    z-index: 10;
+    z-index: 9999;
 
     pointer-events: none;
 
@@ -658,9 +1727,11 @@ footer {
         floatHeart 5s linear forwards;
 }
 
+
 @keyframes floatHeart {
 
     0% {
+
         transform:
             translateY(0)
             scale(.7);
@@ -668,11 +1739,14 @@ footer {
         opacity: 0;
     }
 
+
     15% {
         opacity: 1;
     }
 
+
     100% {
+
         transform:
             translateY(-110vh)
             translateX(var(--move))
@@ -681,73 +1755,351 @@ footer {
 
         opacity: 0;
     }
+
 }
 
-/* الموبايل */
+
+/* ========================================
+   الموبايل
+======================================== */
+
 @media (max-width: 760px) {
 
     section {
         padding: 65px 0;
     }
 
+
     .hero-card {
         padding: 45px 18px;
     }
 
+
     .hero-buttons {
+
         flex-direction: column;
+
         gap: 8px;
     }
 
+
     .hero-buttons .main-btn {
-        width: min(280px, 90%);
+
+        width:
+            min(280px, 90%);
     }
+
 
     .memories {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
+
 
     .gallery {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
+
     .gallery img {
+
         height: 500px;
     }
 
+
     .counter {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
+
     .love-letter {
+
         padding: 25px;
+
         font-size: 16px;
     }
 
+
     .memories-book {
+
         padding: 40px 18px;
+
         border-radius: 28px;
+
+        /*
+           مهم:
+           نخلي الكتاب يسمح بتمدد الكروت
+        */
+        overflow: visible;
     }
 
+
     .memories-book h3 {
+
         font-size: 28px;
     }
 
+
     .memory-features {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
         gap: 12px;
     }
+
 
     .memory-types {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
         gap: 12px;
     }
 
+
     .memory-type {
+
         text-align: right;
     }
 
+
     .book-lock {
+
         font-size: 50px;
     }
+
+
+    /* فورم الذكريات */
+
+    .memory-form {
+
+        padding: 28px 18px;
+
+        border-radius: 25px;
+    }
+
+
+    .memory-form-header h3 {
+
+        font-size: 25px;
+    }
+
+
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 0;
+    }
+
+
+    .form-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .form-buttons .main-btn,
+    .cancel-btn {
+
+        width: 100%;
+    }
+
+
+    .memories-list {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 16px;
+
+        align-items: start;
+
+        overflow: visible;
+    }
+
+
+    /* ========================================
+       الكارت المقفول على الموبايل
+    ======================================== */
+
+    .dynamic-memory {
+
+        min-height: 220px;
+
+        height: auto !important;
+
+        overflow: visible !important;
+    }
+
+
+    .locked-memory {
+
+        min-height: 440px;
+
+        height: auto !important;
+
+        overflow: visible !important;
+
+        padding: 25px 18px;
+    }
+
+
+    .locked-memory-content {
+
+        height: auto !important;
+
+        min-height: 100%;
+
+        overflow: visible !important;
+    }
+
+
+    /* ========================================
+       عداد الموبايل
+    ======================================== */
+
+    .locked-countdown {
+
+        margin-top: 18px;
+
+        padding: 12px 2px;
+
+        overflow: visible !important;
+    }
+
+
+    .countdown-time {
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 6px;
+
+        width: 100%;
+
+        max-width: 280px;
+
+        margin: auto;
+    }
+
+
+    .countdown-box {
+
+        width: auto;
+
+        min-width: 0;
+
+        min-height: 55px;
+
+        padding: 5px 2px;
+    }
+
+
+    .countdown-box strong {
+
+        font-size: 16px;
+    }
+
+
+    .countdown-box small {
+
+        font-size: 8px;
+    }
+
+
+    .countdown-title {
+
+        font-size: 13px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .open-date-text {
+
+        font-size: 9px;
+
+        margin-top: 10px;
+
+        line-height: 1.7;
+    }
+
+
+    .memory-image {
+
+        height: 250px;
+    }
+
+
+    .memory-add-btn {
+
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+}
+
+
+/* ========================================
+   موبايل صغير جدًا
+======================================== */
+
+@media (max-width: 380px) {
+
+    .memories-book {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .locked-memory {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+
+        min-height: 430px;
+    }
+
+
+    .countdown-time {
+
+        gap: 4px;
+
+        max-width: 250px;
+    }
+
+
+    .countdown-box {
+
+        min-height: 52px;
+
+        border-radius: 8px;
+    }
+
+
+    .countdown-box strong {
+
+        font-size: 14px;
+    }
+
+
+    .countdown-box small {
+
+        font-size: 7px;
+    }
+
 }
