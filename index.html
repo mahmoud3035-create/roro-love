@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -11,7 +12,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +22,11 @@
     <!-- النجوم -->
     <div class="stars"></div>
 
-    <!-- البداية -->
+
+    <!-- =========================
+         البداية
+    ========================== -->
+
     <section class="hero">
 
         <div class="hero-card">
@@ -40,28 +47,48 @@
                 فخليته هنا مخصوص ليكي ❤️
             </p>
 
-            <button class="main-btn" onclick="goToStory()">
-                ادخلي يا فراولة ✨
-            </button>
+
+            <!-- الأزرار -->
+
+            <div class="hero-buttons">
+
+                <button class="main-btn" onclick="goToStory()">
+                    ادخلي يا فراولة ✨
+                </button>
+
+                <button class="main-btn memories-btn" onclick="goToMemories()">
+                    الذكريات 📖❤️
+                </button>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- الرسالة -->
+
+    <!-- =========================
+         الرسالة
+    ========================== -->
+
     <section id="story">
 
         <div class="container">
 
             <div class="title">
-                <h2>رسالة من حوده ❤️</h2>
+
+                <h2>
+                    رسالة من حوده ❤️
+                </h2>
 
                 <p>
                     مفيش مناسبة معينة...
                     أنا بس حبيت أقولك
                 </p>
+
             </div>
+
 
             <div class="love-letter">
 
@@ -95,7 +122,11 @@
     </section>
 
 
-    <!-- الذكريات -->
+
+    <!-- =========================
+         الذكريات القديمة
+    ========================== -->
+
     <section>
 
         <div class="container">
@@ -178,7 +209,218 @@
     </section>
 
 
-    <!-- العداد -->
+
+    <!-- =========================
+         كتاب الذكريات الجديد
+    ========================== -->
+
+    <section id="memories-book-section">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>
+                    كتاب ذكرياتنا 📖❤️
+                </h2>
+
+                <p>
+                    مكان لكل حاجة نفسنا نقولها لبعض...
+                    وكل ذكرى ليها تاريخ.
+                </p>
+
+            </div>
+
+
+            <div class="memories-book">
+
+                <div class="book-lock">
+                    🔒
+                </div>
+
+                <h3>
+                    كتابنا المقفول
+                </h3>
+
+                <p>
+                    هنا هنحط الرسائل والاعترافات والحاجات اللي
+                    نفسنا نقولها لبعض، وكل رسالة تقدر تتقفل
+                    وتتحدد ليها ميعاد معين عشان تفتح فيه.
+                </p>
+
+
+                <!-- مميزات الكتاب -->
+
+                <div class="memory-features">
+
+
+                    <!-- الرسائل المقفولة -->
+
+                    <div class="memory-feature">
+
+                        <span>
+                            🔐
+                        </span>
+
+                        <strong>
+                            رسائل مقفولة
+                        </strong>
+
+                        <small>
+                            اكتب رسالة وحدد اليوم والساعة
+                            اللي تحبها تفتح فيها.
+                        </small>
+
+                    </div>
+
+
+                    <!-- العداد -->
+
+                    <div class="memory-feature">
+
+                        <span>
+                            ⏳
+                        </span>
+
+                        <strong>
+                            عداد الفتح
+                        </strong>
+
+                        <small>
+                            الطرف الثاني يشوف الرسالة هتفتح
+                            بعد كام يوم وساعة ودقيقة.
+                        </small>
+
+                    </div>
+
+
+                    <!-- التاريخ -->
+
+                    <div class="memory-feature">
+
+                        <span>
+                            📅
+                        </span>
+
+                        <strong>
+                            كل رسالة بتاريخ
+                        </strong>
+
+                        <small>
+                            كل حاجة تتكتب تفضل جزء من
+                            كتاب ذكرياتنا.
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- أنواع الرسائل -->
+
+                <div class="memory-types">
+
+                    <div class="memory-type">
+
+                        <span>
+                            💌
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                رسالة ليكي
+                            </strong>
+
+                            <p>
+                                كلام نفسك توصله من غير ما
+                                تستني رد.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="memory-type">
+
+                        <span>
+                            🕊️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                كلام من غير رد
+                            </strong>
+
+                            <p>
+                                أقول اللي جوايا وخلاص...
+                                المهم إن الكلام يوصل.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="memory-type">
+
+                        <span>
+                            🗓️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                رسالة للمستقبل
+                            </strong>
+
+                            <p>
+                                رسالة نكتبها النهارده
+                                ونفتحها في وقت نختاره.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="memories-note">
+
+                    ❤️ كل حاجة حلوة بينا تستاهل تتحفظ
+
+                </div>
+
+
+                <div class="locked-note">
+
+                    🔒
+                    <br>
+
+                    الكتاب لسه مقفول...
+                    <br>
+
+                    <small>
+                        قريب هنبدأ نكتب أول صفحة.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         العداد
+    ========================== -->
 
     <section>
 
@@ -200,23 +442,54 @@
             <div class="counter">
 
                 <div class="time-box">
-                    <b id="days">0</b>
-                    <small>يوم</small>
+
+                    <b id="days">
+                        0
+                    </b>
+
+                    <small>
+                        يوم
+                    </small>
+
                 </div>
 
-                <div class="time-box">
-                    <b id="hours">0</b>
-                    <small>ساعة</small>
-                </div>
 
                 <div class="time-box">
-                    <b id="minutes">0</b>
-                    <small>دقيقة</small>
+
+                    <b id="hours">
+                        0
+                    </b>
+
+                    <small>
+                        ساعة
+                    </small>
+
                 </div>
 
+
                 <div class="time-box">
-                    <b id="seconds">0</b>
-                    <small>ثانية</small>
+
+                    <b id="minutes">
+                        0
+                    </b>
+
+                    <small>
+                        دقيقة
+                    </small>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <b id="seconds">
+                        0
+                    </b>
+
+                    <small>
+                        ثانية
+                    </small>
+
                 </div>
 
             </div>
@@ -226,7 +499,10 @@
     </section>
 
 
-    <!-- الصور -->
+
+    <!-- =========================
+         الصور
+    ========================== -->
 
     <section>
 
@@ -260,7 +536,10 @@
     </section>
 
 
-    <!-- الرسالة السرية -->
+
+    <!-- =========================
+         الرسالة السرية
+    ========================== -->
 
     <section>
 
@@ -295,7 +574,10 @@
     </section>
 
 
-    <!-- النهاية -->
+
+    <!-- =========================
+         النهاية
+    ========================== -->
 
     <section class="final">
 
@@ -341,6 +623,11 @@
     </section>
 
 
+
+    <!-- =========================
+         الفوتر
+    ========================== -->
+
     <footer>
 
         صنعه حوده مخصوص لـ رورو ❤️
@@ -352,336 +639,536 @@
     </footer>
 
 
-   <script>
-document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================
-    // زر الدخول
-    // =========================
+    <!-- =========================
+         JavaScript
+    ========================== -->
 
-    window.goToStory = function () {
+    <script>
 
-        const story = document.getElementById("story");
+        document.addEventListener("DOMContentLoaded", function () {
 
-        if (story) {
-            story.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
 
-    };
+            // =========================
+            // زر الدخول
+            // =========================
 
+            window.goToStory = function () {
 
-    // =========================
-    // العداد
-    // =========================
+                const story =
+                    document.getElementById("story");
 
-    const startDate = new Date("2025-08-01T00:00:00");
+                if (story) {
 
-    function updateCounter() {
+                    story.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
 
-        const now = new Date();
+                }
 
-        const difference =
-            Math.max(
-                0,
-                now.getTime() - startDate.getTime()
-            );
+            };
 
-        const totalSeconds =
-            Math.floor(difference / 1000);
 
+            // =========================
+            // زر الذكريات
+            // =========================
 
-        const days =
-            Math.floor(totalSeconds / 86400);
+            window.goToMemories = function () {
 
+                const memories =
+                    document.getElementById(
+                        "memories-book-section"
+                    );
 
-        const hours =
-            Math.floor(
-                (totalSeconds % 86400) / 3600
-            );
+                if (memories) {
 
+                    memories.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
 
-        const minutes =
-            Math.floor(
-                (totalSeconds % 3600) / 60
-            );
+                }
 
+            };
 
-        const seconds =
-            totalSeconds % 60;
 
+            // =========================
+            // العداد
+            // =========================
 
-        document.getElementById("days").textContent =
-            days;
+            const startDate =
+                new Date("2025-08-01T00:00:00");
 
-        document.getElementById("hours").textContent =
-            hours;
 
-        document.getElementById("minutes").textContent =
-            minutes;
+            function updateCounter() {
 
-        document.getElementById("seconds").textContent =
-            seconds;
-    }
+                const now =
+                    new Date();
 
 
-    updateCounter();
+                const difference =
+                    Math.max(
+                        0,
+                        now.getTime() -
+                        startDate.getTime()
+                    );
 
-    setInterval(updateCounter, 1000);
 
-
-    // =========================
-    // الرسالة السرية
-    // =========================
-
-    window.secretMessage = function () {
-
-        const box =
-            document.getElementById("secretBox");
-
-
-        box.innerHTML = `
-            <div>
-                كنتي فاكرة إن الموقع خلص؟ 😂❤️
-
-                <br><br>
-
-                <strong style="color:#ff91b2;">
-                    لا يا فراولة...
-
-                    <br><br>
-
-                    أنا بس حبيت أفكرك بحاجة:
-
-                    <br>
-
-                    بحبك إنتي. ❤️
-                </strong>
-            </div>
-        `;
-
-
-        createHearts(20);
-
-    };
-
-
-    // =========================
-    // الزرار الأخير
-    // =========================
-
-    window.answerYes = function () {
-
-        const message =
-            document.getElementById("celebrate");
-
-
-        message.style.display = "block";
-
-
-        message.innerHTML = `
-            كنت عارف إجابتك يا فراولة 😂❤️
-
-            <br><br>
-
-            بحبك إنتي... وبس. ❤️
-        `;
-
-
-        createHearts(60);
-
-    };
-
-
-    // =========================
-    // القلوب
-    // =========================
-
-    function createHearts(number) {
-
-        for (let i = 0; i < number; i++) {
-
-            const heart =
-                document.createElement("div");
-
-
-            heart.className = "heart";
-
-
-            const symbols = [
-                "❤️",
-                "💗",
-                "💕",
-                "💖",
-                "✨",
-                "🍓"
-            ];
-
-
-            heart.innerHTML =
-                symbols[
+                const totalSeconds =
                     Math.floor(
-                        Math.random() *
-                        symbols.length
-                    )
-                ];
+                        difference / 1000
+                    );
 
 
-            heart.style.position = "fixed";
+                const days =
+                    Math.floor(
+                        totalSeconds / 86400
+                    );
 
-            heart.style.left =
-                Math.random() * 100 + "vw";
 
-            heart.style.bottom = "-30px";
+                const hours =
+                    Math.floor(
+                        (totalSeconds % 86400) /
+                        3600
+                    );
 
-            heart.style.zIndex = "9999";
 
-            heart.style.pointerEvents = "none";
+                const minutes =
+                    Math.floor(
+                        (totalSeconds % 3600) /
+                        60
+                    );
 
-            heart.style.fontSize =
-                (15 + Math.random() * 25) + "px";
 
-            heart.style.setProperty(
-                "--move",
-                (Math.random() * 240 - 120) + "px"
+                const seconds =
+                    totalSeconds % 60;
+
+
+                const daysElement =
+                    document.getElementById(
+                        "days"
+                    );
+
+
+                const hoursElement =
+                    document.getElementById(
+                        "hours"
+                    );
+
+
+                const minutesElement =
+                    document.getElementById(
+                        "minutes"
+                    );
+
+
+                const secondsElement =
+                    document.getElementById(
+                        "seconds"
+                    );
+
+
+                if (daysElement) {
+
+                    daysElement.textContent =
+                        days;
+
+                }
+
+
+                if (hoursElement) {
+
+                    hoursElement.textContent =
+                        hours;
+
+                }
+
+
+                if (minutesElement) {
+
+                    minutesElement.textContent =
+                        minutes;
+
+                }
+
+
+                if (secondsElement) {
+
+                    secondsElement.textContent =
+                        seconds;
+
+                }
+
+            }
+
+
+            updateCounter();
+
+            setInterval(
+                updateCounter,
+                1000
             );
 
 
-            heart.style.animation =
-                "floatHeart " +
-                (3 + Math.random() * 3) +
-                "s linear forwards";
+
+            // =========================
+            // الرسالة السرية
+            // =========================
+
+            window.secretMessage = function () {
+
+                const box =
+                    document.getElementById(
+                        "secretBox"
+                    );
 
 
-            document.body.appendChild(heart);
+                if (!box) {
+                    return;
+                }
 
 
-            setTimeout(function () {
+                box.innerHTML = `
 
-                heart.remove();
+                    <div>
 
-            }, 6500);
+                        كنتي فاكرة إن الموقع خلص؟
+                        😂❤️
 
-        }
+                        <br><br>
 
-    }
+                        <strong style="color:#ff91b2;">
 
+                            لا يا فراولة...
 
-    // =========================
-    // قلوب تلقائية
-    // =========================
+                            <br><br>
 
-    setInterval(function () {
+                            أنا بس حبيت أفكرك بحاجة:
 
-        createHearts(1);
+                            <br><br>
 
-    }, 1800);
+                            بحبك إنتي. ❤️
 
+                        </strong>
 
-    // =========================
-    // تكبير الصور
-    // =========================
-
-    const images =
-        document.querySelectorAll(".gallery img");
-
-
-    images.forEach(function (image) {
-
-        image.style.cursor = "pointer";
-
-
-        image.addEventListener(
-            "click",
-            function () {
-
-                const overlay =
-                    document.createElement("div");
-
-
-                overlay.style.position = "fixed";
-
-                overlay.style.inset = "0";
-
-                overlay.style.background =
-                    "rgba(0,0,0,.94)";
-
-                overlay.style.zIndex = "10000";
-
-                overlay.style.display = "flex";
-
-                overlay.style.alignItems =
-                    "center";
-
-                overlay.style.justifyContent =
-                    "center";
-
-                overlay.style.padding = "20px";
-
-
-                overlay.innerHTML = `
-
-                    <button
-                        style="
-                        position:absolute;
-                        top:20px;
-                        right:25px;
-                        width:50px;
-                        height:50px;
-                        border:0;
-                        border-radius:50%;
-                        background:#ff4f91;
-                        color:white;
-                        font-size:30px;
-                        cursor:pointer;
-                        "
-                    >
-                        ×
-                    </button>
-
-                    <img
-                        src="${image.src}"
-                        style="
-                        max-width:95%;
-                        max-height:90vh;
-                        object-fit:contain;
-                        border-radius:20px;
-                        "
-                    >
+                    </div>
 
                 `;
 
 
-                document.body.appendChild(
-                    overlay
-                );
+                createHearts(20);
+
+            };
 
 
-                overlay.addEventListener(
-                    "click",
-                    function (event) {
 
-                        if (
-                            event.target === overlay ||
-                            event.target.tagName === "BUTTON"
-                        ) {
+            // =========================
+            // الزرار الأخير
+            // =========================
 
-                            overlay.remove();
+            window.answerYes = function () {
 
-                        }
+                const message =
+                    document.getElementById(
+                        "celebrate"
+                    );
 
-                    }
-                );
+
+                if (!message) {
+                    return;
+                }
+
+
+                message.style.display =
+                    "block";
+
+
+                message.innerHTML = `
+
+                    كنت عارف إجابتك
+                    يا فراولة 😂❤️
+
+                    <br><br>
+
+                    بحبك إنتي... وبس. ❤️
+
+                `;
+
+
+                createHearts(60);
+
+            };
+
+
+
+            // =========================
+            // القلوب
+            // =========================
+
+            function createHearts(number) {
+
+                for (
+                    let i = 0;
+                    i < number;
+                    i++
+                ) {
+
+
+                    const heart =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    heart.className =
+                        "heart";
+
+
+                    const symbols = [
+
+                        "❤️",
+                        "💗",
+                        "💕",
+                        "💖",
+                        "✨",
+                        "🍓"
+
+                    ];
+
+
+                    heart.innerHTML =
+                        symbols[
+                            Math.floor(
+                                Math.random() *
+                                symbols.length
+                            )
+                        ];
+
+
+                    heart.style.position =
+                        "fixed";
+
+
+                    heart.style.left =
+                        Math.random() *
+                        100 +
+                        "vw";
+
+
+                    heart.style.bottom =
+                        "-30px";
+
+
+                    heart.style.zIndex =
+                        "9999";
+
+
+                    heart.style.pointerEvents =
+                        "none";
+
+
+                    heart.style.fontSize =
+                        (
+                            15 +
+                            Math.random() *
+                            25
+                        ) +
+                        "px";
+
+
+                    heart.style.setProperty(
+
+                        "--move",
+
+                        (
+                            Math.random() *
+                            240 -
+                            120
+                        ) +
+                        "px"
+
+                    );
+
+
+                    heart.style.animation =
+                        "floatHeart " +
+                        (
+                            3 +
+                            Math.random() *
+                            3
+                        ) +
+                        "s linear forwards";
+
+
+                    document.body.appendChild(
+                        heart
+                    );
+
+
+                    setTimeout(
+                        function () {
+
+                            heart.remove();
+
+                        },
+                        6500
+                    );
+
+                }
 
             }
-        );
 
-    });
 
-});
-</script>
+
+            // =========================
+            // قلوب تلقائية
+            // =========================
+
+            setInterval(
+                function () {
+
+                    createHearts(1);
+
+                },
+                1800
+            );
+
+
+
+            // =========================
+            // تكبير الصور
+            // =========================
+
+            const images =
+                document.querySelectorAll(
+                    ".gallery img"
+                );
+
+
+            images.forEach(
+                function (image) {
+
+                    image.style.cursor =
+                        "pointer";
+
+
+                    image.addEventListener(
+                        "click",
+                        function () {
+
+
+                            const overlay =
+                                document.createElement(
+                                    "div"
+                                );
+
+
+                            overlay.style.position =
+                                "fixed";
+
+
+                            overlay.style.inset =
+                                "0";
+
+
+                            overlay.style.background =
+                                "rgba(0,0,0,.94)";
+
+
+                            overlay.style.zIndex =
+                                "10000";
+
+
+                            overlay.style.display =
+                                "flex";
+
+
+                            overlay.style.alignItems =
+                                "center";
+
+
+                            overlay.style.justifyContent =
+                                "center";
+
+
+                            overlay.style.padding =
+                                "20px";
+
+
+                            overlay.innerHTML = `
+
+                                <button
+                                    style="
+                                    position:absolute;
+                                    top:20px;
+                                    right:25px;
+                                    width:50px;
+                                    height:50px;
+                                    border:0;
+                                    border-radius:50%;
+                                    background:#ff4f91;
+                                    color:white;
+                                    font-size:30px;
+                                    cursor:pointer;
+                                    "
+                                >
+                                    ×
+                                </button>
+
+
+                                <img
+                                    src="${image.src}"
+                                    alt="رورو"
+                                    style="
+                                    max-width:95%;
+                                    max-height:90vh;
+                                    object-fit:contain;
+                                    border-radius:20px;
+                                    "
+                                >
+
+                            `;
+
+
+                            document.body.appendChild(
+                                overlay
+                            );
+
+
+                            overlay.addEventListener(
+                                "click",
+                                function (event) {
+
+                                    if (
+
+                                        event.target ===
+                                        overlay ||
+
+                                        event.target.tagName ===
+                                        "BUTTON"
+
+                                    ) {
+
+                                        overlay.remove();
+
+                                    }
+
+                                }
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        });
+
+    </script>
 
 </body>
 
 </html>
+```
