@@ -32,7 +32,6 @@ body::before {
     content: "";
 
     position: fixed;
-
     inset: 0;
 
     background-image:
@@ -138,7 +137,9 @@ section {
 ======================================== */
 
 h1 {
-    font-family: "Playfair Display", serif;
+    font-family:
+        "Playfair Display",
+        serif;
 
     font-size:
         clamp(50px, 9vw, 90px);
@@ -181,7 +182,11 @@ h1 span {
 
 
 .main-btn {
-    margin-top: 28px;
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     padding: 14px 30px;
 
@@ -198,7 +203,10 @@ h1 span {
 
     color: white;
 
-    font-family: "Cairo", Arial, sans-serif;
+    font-family:
+        "Cairo",
+        Arial,
+        sans-serif;
 
     font-size: 16px;
 
@@ -207,9 +215,23 @@ h1 span {
     cursor: pointer;
 
     box-shadow:
-        0 10px 30px rgba(255, 79, 145, .3);
+        0 10px 30px
+        rgba(255, 79, 145, .3);
 
-    transition: .3s;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        opacity .3s ease;
+
+    position: relative;
+
+    z-index: 20;
+
+    pointer-events: auto;
+
+    -webkit-tap-highlight-color: transparent;
+
+    touch-action: manipulation;
 }
 
 
@@ -222,6 +244,22 @@ h1 span {
     transform:
         translateY(-4px)
         scale(1.03);
+}
+
+
+.main-btn:active {
+    transform:
+        translateY(0)
+        scale(.98);
+}
+
+
+.main-btn:disabled {
+    cursor: wait;
+
+    opacity: .6;
+
+    transform: none;
 }
 
 
@@ -238,13 +276,15 @@ h1 span {
         );
 
     box-shadow:
-        0 10px 30px rgba(124, 92, 255, .28);
+        0 10px 30px
+        rgba(124, 92, 255, .28);
 }
 
 
 .memories-btn:hover {
     box-shadow:
-        0 15px 40px rgba(124, 92, 255, .4);
+        0 15px 40px
+        rgba(124, 92, 255, .4);
 }
 
 
@@ -334,6 +374,8 @@ h1 span {
         1px solid rgba(255, 255, 255, .09);
 
     transition: .3s;
+
+    position: relative;
 }
 
 
@@ -400,7 +442,7 @@ h1 span {
 
     position: relative;
 
-    overflow: hidden;
+    overflow: visible;
 }
 
 
@@ -428,6 +470,8 @@ h1 span {
         );
 
     pointer-events: none;
+
+    z-index: 0;
 }
 
 
@@ -484,7 +528,7 @@ h1 span {
 
     position: relative;
 
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -543,70 +587,6 @@ h1 span {
 
 
 /* ========================================
-   أنواع الرسائل
-======================================== */
-
-.memory-types {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 15px;
-
-    margin-top: 20px;
-
-    position: relative;
-
-    z-index: 1;
-}
-
-
-.memory-type {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    text-align: right;
-
-    padding: 20px;
-
-    border-radius: 20px;
-
-    background:
-        rgba(255, 255, 255, .035);
-
-    border:
-        1px solid rgba(255, 255, 255, .07);
-}
-
-
-.memory-type > span {
-    font-size: 34px;
-
-    flex-shrink: 0;
-}
-
-
-.memory-type strong {
-    display: block;
-
-    margin-bottom: 5px;
-}
-
-
-.memory-type p {
-    color: #aaa;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-
-/* ========================================
    رسالة الكتاب
 ======================================== */
 
@@ -621,7 +601,7 @@ h1 span {
 
     position: relative;
 
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -644,7 +624,7 @@ h1 span {
 
     position: relative;
 
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -666,7 +646,7 @@ h1 span {
 
     position: relative;
 
-    z-index: 2;
+    z-index: 20;
 }
 
 
@@ -707,7 +687,7 @@ h1 span {
 
     position: relative;
 
-    z-index: 5;
+    z-index: 50;
 
     animation:
         formAppear .35s ease;
@@ -794,7 +774,6 @@ h1 span {
 .form-group input,
 .form-group textarea,
 .form-group select {
-
     width: 100%;
 
     padding: 14px 16px;
@@ -836,14 +815,9 @@ h1 span {
 }
 
 
-/* ========================================
-   التركيز على الحقول
-======================================== */
-
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-
     border-color:
         #ff6f9f;
 
@@ -860,11 +834,10 @@ h1 span {
 
 
 /* ========================================
-   صف التاريخ والنوع
+   التاريخ والنوع
 ======================================== */
 
 .form-row {
-
     display: grid;
 
     grid-template-columns:
@@ -879,7 +852,6 @@ h1 span {
 ======================================== */
 
 .lock-option {
-
     margin-top: 10px;
 
     margin-bottom: 20px;
@@ -897,7 +869,6 @@ h1 span {
 
 
 .lock-option label {
-
     display: flex;
 
     align-items: center;
@@ -913,7 +884,6 @@ h1 span {
 
 
 .lock-option input {
-
     width: 18px;
 
     height: 18px;
@@ -930,7 +900,6 @@ h1 span {
 ======================================== */
 
 .form-hint {
-
     display: block;
 
     margin-top: 7px;
@@ -948,7 +917,6 @@ h1 span {
 ======================================== */
 
 .form-buttons {
-
     display: flex;
 
     justify-content: center;
@@ -973,7 +941,6 @@ h1 span {
 ======================================== */
 
 .cancel-btn {
-
     padding: 14px 28px;
 
     border:
@@ -998,11 +965,18 @@ h1 span {
     cursor: pointer;
 
     transition: .3s;
+
+    position: relative;
+
+    z-index: 20;
+
+    pointer-events: auto;
+
+    touch-action: manipulation;
 }
 
 
 .cancel-btn:hover {
-
     background:
         rgba(255, 255, 255, .12);
 
@@ -1016,7 +990,6 @@ h1 span {
 ======================================== */
 
 .form-status {
-
     min-height: 25px;
 
     margin-top: 18px;
@@ -1036,7 +1009,6 @@ h1 span {
 ======================================== */
 
 .memories-list {
-
     display: grid;
 
     grid-template-columns:
@@ -1050,11 +1022,9 @@ h1 span {
 
     z-index: 2;
 
-    /*
-       مهم:
-       يسمح للكروت بالتمدد حسب محتواها
-    */
     align-items: start;
+
+    overflow: visible;
 }
 
 
@@ -1063,13 +1033,8 @@ h1 span {
 ======================================== */
 
 .dynamic-memory {
-
     position: relative;
 
-    /*
-       كان overflow:hidden
-       وده كان بيقص العداد
-    */
     overflow: visible !important;
 
     min-height: 220px;
@@ -1081,7 +1046,6 @@ h1 span {
 
 
 .dynamic-memory:hover {
-
     transform:
         translateY(-6px);
 }
@@ -1092,7 +1056,6 @@ h1 span {
 ======================================== */
 
 .locked-memory {
-
     height: auto !important;
 
     min-height: 420px;
@@ -1106,7 +1069,6 @@ h1 span {
 
 
 .locked-memory-content {
-
     width: 100%;
 
     height: auto !important;
@@ -1126,7 +1088,6 @@ h1 span {
 ======================================== */
 
 .memory-image {
-
     width: 100%;
 
     height: 230px;
@@ -1154,7 +1115,6 @@ h1 span {
 ======================================== */
 
 .memory-icon {
-
     font-size: 32px;
 
     margin-bottom: 8px;
@@ -1162,7 +1122,6 @@ h1 span {
 
 
 .memory-date {
-
     color: #ff91b2;
 
     font-size: 13px;
@@ -1172,7 +1131,6 @@ h1 span {
 
 
 .dynamic-memory .memory-type {
-
     display: inline-block;
 
     padding: 5px 12px;
@@ -1194,13 +1152,11 @@ h1 span {
 
 
 .dynamic-memory h3 {
-
     margin-bottom: 10px;
 }
 
 
 .dynamic-memory p {
-
     white-space: pre-wrap;
 
     color: #c8c3d0;
@@ -1210,11 +1166,10 @@ h1 span {
 
 
 /* ========================================
-   العداد الخاص بالرسائل المقفولة
+   عداد الرسائل المقفولة
 ======================================== */
 
 .locked-countdown {
-
     display: block !important;
 
     width: 100% !important;
@@ -1241,12 +1196,7 @@ h1 span {
 }
 
 
-/* ========================================
-   أيقونة القفل
-======================================== */
-
 .countdown-lock-icon {
-
     display: block;
 
     font-size: 22px;
@@ -1257,12 +1207,7 @@ h1 span {
 }
 
 
-/* ========================================
-   عنوان العداد
-======================================== */
-
 .countdown-title {
-
     display: block;
 
     color: #ff91b2;
@@ -1277,12 +1222,7 @@ h1 span {
 }
 
 
-/* ========================================
-   صف الوقت
-======================================== */
-
 .countdown-time {
-
     display: flex !important;
 
     justify-content: center;
@@ -1301,12 +1241,7 @@ h1 span {
 }
 
 
-/* ========================================
-   مربعات العداد
-======================================== */
-
 .countdown-box {
-
     display: flex !important;
 
     flex-direction: column;
@@ -1336,12 +1271,7 @@ h1 span {
 }
 
 
-/* ========================================
-   أرقام العداد
-======================================== */
-
 .countdown-box strong {
-
     display: block;
 
     color: #ffffff;
@@ -1354,12 +1284,7 @@ h1 span {
 }
 
 
-/* ========================================
-   أسماء الوحدات
-======================================== */
-
 .countdown-box small {
-
     display: block;
 
     margin-top: 3px;
@@ -1372,12 +1297,7 @@ h1 span {
 }
 
 
-/* ========================================
-   موعد الفتح
-======================================== */
-
 .open-date-text {
-
     display: block;
 
     width: 100%;
@@ -1394,12 +1314,7 @@ h1 span {
 }
 
 
-/* ========================================
-   عند فتح الرسالة
-======================================== */
-
 .countdown-opened {
-
     display: block;
 
     color: #ff91b2;
@@ -1412,12 +1327,7 @@ h1 span {
 }
 
 
-/* ========================================
-   حالة التحميل
-======================================== */
-
 .countdown-loading {
-
     display: block;
 
     color: #ffb4ca;
@@ -1433,7 +1343,6 @@ h1 span {
 ======================================== */
 
 .counter {
-
     max-width: 800px;
 
     margin: auto;
@@ -1448,7 +1357,6 @@ h1 span {
 
 
 .time-box {
-
     padding: 25px 10px;
 
     text-align: center;
@@ -1464,7 +1372,6 @@ h1 span {
 
 
 .time-box b {
-
     display: block;
 
     font-size: 34px;
@@ -1483,7 +1390,6 @@ h1 span {
 ======================================== */
 
 .gallery {
-
     display: grid;
 
     grid-template-columns:
@@ -1494,7 +1400,6 @@ h1 span {
 
 
 .gallery img {
-
     width: 100%;
 
     height: 430px;
@@ -1512,11 +1417,14 @@ h1 span {
     transition: .4s;
 
     cursor: pointer;
+
+    position: relative;
+
+    z-index: 3;
 }
 
 
 .gallery img:hover {
-
     transform:
         scale(1.03);
 }
@@ -1532,7 +1440,6 @@ h1 span {
 
 
 .secret-box {
-
     max-width: 700px;
 
     min-height: 130px;
@@ -1566,7 +1473,6 @@ h1 span {
 ======================================== */
 
 .final {
-
     min-height: 90vh;
 
     display: flex;
@@ -1578,7 +1484,6 @@ h1 span {
 
 
 .question {
-
     font-size:
         clamp(30px, 6vw, 55px);
 
@@ -1587,7 +1492,6 @@ h1 span {
 
 
 .answers {
-
     display: flex;
 
     gap: 15px;
@@ -1595,11 +1499,14 @@ h1 span {
     justify-content: center;
 
     flex-wrap: wrap;
+
+    position: relative;
+
+    z-index: 20;
 }
 
 
 #celebrate {
-
     display: none;
 
     margin-top: 30px;
@@ -1615,7 +1522,6 @@ h1 span {
 ======================================== */
 
 footer {
-
     text-align: center;
 
     padding: 30px;
@@ -1624,6 +1530,10 @@ footer {
 
     border-top:
         1px solid rgba(255, 255, 255, .08);
+
+    position: relative;
+
+    z-index: 2;
 }
 
 
@@ -1632,12 +1542,11 @@ footer {
 ======================================== */
 
 .image-overlay {
-
     position: fixed;
 
     inset: 0;
 
-    z-index: 9999;
+    z-index: 99999;
 
     background:
         rgba(0, 0, 0, .92);
@@ -1653,7 +1562,6 @@ footer {
 
 
 .image-overlay img {
-
     max-width: 95%;
 
     max-height: 90vh;
@@ -1672,7 +1580,6 @@ footer {
 
 
 .close-image {
-
     position: absolute;
 
     top: 20px;
@@ -1699,11 +1606,12 @@ footer {
     cursor: pointer;
 
     color: white;
+
+    z-index: 100000;
 }
 
 
 .close-image:hover {
-
     background:
         rgba(255, 80, 130, .5);
 }
@@ -1714,7 +1622,6 @@ footer {
 ======================================== */
 
 .heart {
-
     position: fixed;
 
     bottom: -30px;
@@ -1731,7 +1638,6 @@ footer {
 @keyframes floatHeart {
 
     0% {
-
         transform:
             translateY(0)
             scale(.7);
@@ -1746,7 +1652,6 @@ footer {
 
 
     100% {
-
         transform:
             translateY(-110vh)
             translateX(var(--move))
@@ -1776,7 +1681,6 @@ footer {
 
 
     .hero-buttons {
-
         flex-direction: column;
 
         gap: 8px;
@@ -1784,41 +1688,35 @@ footer {
 
 
     .hero-buttons .main-btn {
-
         width:
             min(280px, 90%);
     }
 
 
     .memories {
-
         grid-template-columns:
             1fr;
     }
 
 
     .gallery {
-
         grid-template-columns:
             1fr;
     }
 
 
     .gallery img {
-
         height: 500px;
     }
 
 
     .counter {
-
         grid-template-columns:
             repeat(2, 1fr);
     }
 
 
     .love-letter {
-
         padding: 25px;
 
         font-size: 16px;
@@ -1826,27 +1724,20 @@ footer {
 
 
     .memories-book {
-
         padding: 40px 18px;
 
         border-radius: 28px;
 
-        /*
-           مهم:
-           نخلي الكتاب يسمح بتمدد الكروت
-        */
         overflow: visible;
     }
 
 
     .memories-book h3 {
-
         font-size: 28px;
     }
 
 
     .memory-features {
-
         grid-template-columns:
             1fr;
 
@@ -1855,7 +1746,6 @@ footer {
 
 
     .memory-types {
-
         grid-template-columns:
             1fr;
 
@@ -1864,21 +1754,18 @@ footer {
 
 
     .memory-type {
-
         text-align: right;
     }
 
 
     .book-lock {
-
         font-size: 50px;
     }
 
 
-    /* فورم الذكريات */
+    /* فورم */
 
     .memory-form {
-
         padding: 28px 18px;
 
         border-radius: 25px;
@@ -1886,13 +1773,11 @@ footer {
 
 
     .memory-form-header h3 {
-
         font-size: 25px;
     }
 
 
     .form-row {
-
         grid-template-columns:
             1fr;
 
@@ -1901,20 +1786,17 @@ footer {
 
 
     .form-buttons {
-
         flex-direction: column;
     }
 
 
     .form-buttons .main-btn,
     .cancel-btn {
-
         width: 100%;
     }
 
 
     .memories-list {
-
         grid-template-columns:
             1fr;
 
@@ -1926,12 +1808,7 @@ footer {
     }
 
 
-    /* ========================================
-       الكارت المقفول على الموبايل
-    ======================================== */
-
     .dynamic-memory {
-
         min-height: 220px;
 
         height: auto !important;
@@ -1941,7 +1818,6 @@ footer {
 
 
     .locked-memory {
-
         min-height: 440px;
 
         height: auto !important;
@@ -1953,7 +1829,6 @@ footer {
 
 
     .locked-memory-content {
-
         height: auto !important;
 
         min-height: 100%;
@@ -1962,12 +1837,9 @@ footer {
     }
 
 
-    /* ========================================
-       عداد الموبايل
-    ======================================== */
+    /* عداد الموبايل */
 
     .locked-countdown {
-
         margin-top: 18px;
 
         padding: 12px 2px;
@@ -1977,7 +1849,6 @@ footer {
 
 
     .countdown-time {
-
         display: grid !important;
 
         grid-template-columns:
@@ -1994,7 +1865,6 @@ footer {
 
 
     .countdown-box {
-
         width: auto;
 
         min-width: 0;
@@ -2006,19 +1876,16 @@ footer {
 
 
     .countdown-box strong {
-
         font-size: 16px;
     }
 
 
     .countdown-box small {
-
         font-size: 8px;
     }
 
 
     .countdown-title {
-
         font-size: 13px;
 
         margin-bottom: 10px;
@@ -2026,7 +1893,6 @@ footer {
 
 
     .open-date-text {
-
         font-size: 9px;
 
         margin-top: 10px;
@@ -2036,13 +1902,11 @@ footer {
 
 
     .memory-image {
-
         height: 250px;
     }
 
 
     .memory-add-btn {
-
         width: 100%;
 
         max-width: 300px;
@@ -2058,7 +1922,6 @@ footer {
 @media (max-width: 380px) {
 
     .memories-book {
-
         padding-left: 12px;
 
         padding-right: 12px;
@@ -2066,7 +1929,6 @@ footer {
 
 
     .locked-memory {
-
         padding-left: 12px;
 
         padding-right: 12px;
@@ -2076,7 +1938,6 @@ footer {
 
 
     .countdown-time {
-
         gap: 4px;
 
         max-width: 250px;
@@ -2084,7 +1945,6 @@ footer {
 
 
     .countdown-box {
-
         min-height: 52px;
 
         border-radius: 8px;
@@ -2092,14 +1952,20 @@ footer {
 
 
     .countdown-box strong {
-
         font-size: 14px;
     }
 
 
     .countdown-box small {
-
         font-size: 7px;
+    }
+
+
+    .main-btn {
+        min-height: 48px;
+
+        padding:
+            12px 22px;
     }
 
 }

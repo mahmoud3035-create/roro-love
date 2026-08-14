@@ -305,8 +305,6 @@
             <div class="memories-book">
 
 
-                <!-- القفل -->
-
                 <div class="book-lock">
                     🔒
                 </div>
@@ -331,7 +329,7 @@
 
 
                 <!-- ========================================
-                     إحصائيات
+                     الإحصائيات
                 ======================================== -->
 
                 <div class="memory-features">
@@ -394,10 +392,6 @@
 
 
 
-                <!-- ========================================
-                     ملاحظة
-                ======================================== -->
-
                 <div class="memories-note">
 
                     ❤️ كل حاجة حلوة بينا تستاهل تتحفظ
@@ -407,7 +401,7 @@
 
 
                 <!-- ========================================
-                     إضافة ذكرى
+                     زر إضافة ذكرى
                 ======================================== -->
 
                 <div class="add-memory-area">
@@ -968,66 +962,11 @@
 
 
     <!-- ========================================
-         وظائف التنقل الأساسية
-         لضمان عمل أول زرين
-    ======================================== -->
-
-    <script>
-
-        function goToStory() {
-
-            const story =
-                document.getElementById("story");
-
-            if (story) {
-
-                story.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
-            }
-
-        }
-
-
-        function goToMemories() {
-
-            const memories =
-                document.getElementById(
-                    "memories-book-section"
-                );
-
-            if (memories) {
-
-                memories.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
-            }
-
-        }
-
-
-        window.goToStory =
-            goToStory;
-
-
-        window.goToMemories =
-            goToMemories;
-
-    </script>
-
-
-
-    <!-- ========================================
          JavaScript الرئيسي
-         موجود داخل مجلد RoRo
+         مهم: main.js داخل مجلد RoRo
     ======================================== -->
 
-    <script src="./RoRo/main.js"></script>
-
+<script src="./main.js"></script>
 
 </body>
 
