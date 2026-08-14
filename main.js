@@ -3612,3 +3612,95 @@ document.addEventListener(
 
     }
 );
+
+
+// ========================================
+// شاشة كلمة السر
+// ========================================
+
+function unlockSite() {
+
+    const passwordInput =
+        document.getElementById(
+            "site-password"
+        );
+
+    const errorMessage =
+        document.getElementById(
+            "password-error"
+        );
+
+    const overlay =
+        document.getElementById(
+            "login-overlay"
+        );
+
+    if (!passwordInput || !overlay) {
+        return;
+    }
+
+    if (passwordInput.value === "Roro2025") {
+        overlay.style.display = "none";
+
+        sessionStorage.setItem(
+            "roro-site-unlocked",
+            "true"
+        );
+
+        if (errorMessage) {
+            errorMessage.textContent = "";
+        }
+
+    } else {
+
+        if (errorMessage) {
+            errorMessage.textContent =
+                "كلمة السر مش صحيحة ❤️";
+        }
+
+        passwordInput.value = "";
+        passwordInput.focus();
+    }
+}
+
+
+window.unlockSite =
+    unlockSite;
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const overlay =
+            document.getElementById(
+                "login-overlay"
+            );
+
+        const passwordInput =
+            document.getElementById(
+                "site-password"
+            );
+
+        if (!overlay || !passwordInput) {
+            return;
+        }
+
+        if (
+            sessionStorage.getItem(
+                "roro-site-unlocked"
+            ) === "true"
+        ) {
+            overlay.style.display = "none";
+        }
+
+        passwordInput.addEventListener(
+            "keydown",
+            function (event) {
+                if (event.key === "Enter") {
+                    unlockSite();
+                }
+            }
+        );
+    }
+);
